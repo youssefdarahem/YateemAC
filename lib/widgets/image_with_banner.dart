@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
 
+/*
+* draws the images with the text on the bottom. 
+* Parameters 
+*  String Text : text that shows under the image
+*  String imagePath : path to the image 
+ */
 class ImageWithText extends StatelessWidget {
   final String text;
   final String imagePath;
@@ -39,7 +45,10 @@ class ImageWithText extends StatelessWidget {
             left: 5.0,
             child: Text(
               text,
-              style: const TextStyle(color: Colors.white),
+              style: Theme.of(context)
+                  .textTheme
+                  .bodyText2
+                  ?.copyWith(color: Colors.white),
             ),
           ),
         ],
